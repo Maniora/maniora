@@ -31,7 +31,8 @@ import {
   Launch,
   Phone,
   Email,
-  LocationOn
+  LocationOn,
+  WhatsApp
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
@@ -159,7 +160,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maniora.in/" />
         <meta name="twitter:card" content="/home.png" />
-        <meta name="twitter:title" content="MANIORA | Bespoke Website Development & Digital Solutions" />
+        <meta name="twitter:title" content="MANIORA | Website Development & Digital Solutions" />
         <meta name="twitter:description" content="Premium, custom-built websites and digital solutions. No templates, just results." />
         <meta name="twitter:image" content="/logo2White.png" />
         <script type="application/ld+json">
@@ -327,10 +328,13 @@ const Home = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Button
-                      component={Link}
-                      to="/about"
+                      component="a"
+                      href="https://wa.me/919640161711?text=Hi%20MANIORA%20Team%2C%20I%20would%20like%20to%20enquire%20about%20your%20website%20services."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       variant="outlined"
                       size="large"
+                      startIcon={<WhatsApp sx={{ color: '#25D366' }} />}
                       sx={{
                         borderColor: 'rgba(255, 255, 255, 0.3)',
                         color: 'white',
@@ -340,14 +344,13 @@ const Home = () => {
                         fontWeight: 600,
                         width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
-                          borderColor: '#FF2C1F',
-                          background: 'rgba(255, 44, 31, 0.1)',
+                          borderColor: '#25D366',
+                          background: 'rgba(37, 211, 102, 0.08)',
                         },
                         transition: 'all 0.3s ease',
                       }}
                     >
-                      {/* <PlayArrow sx={{ mr: 1 }} /> */}
-                      Know more About Us
+                      WhatsApp Enquiry
                     </Button>
                   </motion.div>
                 </Box>

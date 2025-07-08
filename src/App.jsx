@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import { Analytics } from '@vercel/analytics/react';
 
 // Pages
 import Home from './pages/Home';
@@ -114,6 +115,7 @@ function App() {
           <Footer />
         </div>
       </Router>
+      <Analytics />
     </ThemeProvider>
   );
 }
