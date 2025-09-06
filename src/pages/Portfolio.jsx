@@ -39,6 +39,30 @@ const Portfolio = () => {
 
   const projects = [
     {
+    id: 0,
+    title: "Pixelfable18",
+    category: "E-Commerce / Preset Selling",
+    description: "A modern e-commerce platform where the client sells Lightroom preset packs. Includes a secure admin panel to manage orders, track presets, and handle customers effectively.",
+    image: "/images/pixelfable18-placeholder.png", // Replace with actual screenshot
+    metrics: {
+      loadTime: "1.3s",
+      lighthouse: "94/100",
+      mobile: "Optimized",
+      uptime: "99.8%"
+    },
+    features: [
+      "Preset selling platform",
+      "Integrated admin panel",
+      "Secure payment handling",
+      "Order management system"
+    ],
+    beforeAfter: {
+      before: "No online selling platform",
+      after: "Full-featured e-commerce website with automated order tracking"
+    },
+    liveUrl: "https://pixelfable18.in"
+  },
+    {
       id: 1,
       title: "Build Your Vision",
       category: "Business Website",
