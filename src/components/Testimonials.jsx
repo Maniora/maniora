@@ -5,20 +5,21 @@ const testimonials = [
   {
     name: "Akhil",
     role: "Founder - Pixelfable18",
-    feedback: "Working with MANIORA was an amazing experience. They built us a preset-selling website with an admin panel that makes it super easy to manage orders and track presets. Our business finally has a professional online presence!",
-    avatar: "/pixelfable18testimonial.jpg" // Replace with client image
-  }
+    feedback:
+      "Working with MANIORA was an amazing experience. They built us a preset-selling website with an admin panel that makes it super easy to manage orders and track presets. Our business finally has a professional online presence!",
+    avatar: "/pixelfable18testimonial.jpg", // keep your image here
+  },
 ];
 
 const Testimonials = () => {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)',
-        py: { xs: 6, md: 10 },
+        background: 'linear-gradient(135deg, #111 0%, #000 100%)',
+        py: { xs: 8, md: 12 },
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,8 +31,8 @@ const Testimonials = () => {
             variant="h2"
             align="center"
             sx={{
-              fontWeight: 700,
-              fontSize: { xs: '1.5rem', md: '2.2rem' },
+              fontWeight: 800,
+              fontSize: { xs: '1.8rem', md: '2.4rem' },
               mb: 2,
               color: 'white',
               letterSpacing: 1,
@@ -40,15 +41,22 @@ const Testimonials = () => {
           >
             Client Testimonials
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', mb: { xs: 4, md: 6 } }}>
-            <Box sx={{ width: 60, height: 4, borderRadius: 2, background: 'linear-gradient(90deg, #FF2C1F, #FF6B35)' }} />
+          <Box sx={{ display: 'flex', justifyContent: 'center', mb: { xs: 5, md: 8 } }}>
+            <Box
+              sx={{
+                width: 70,
+                height: 4,
+                borderRadius: 2,
+                background: 'linear-gradient(90deg, #FF2C1F, #FF6B35)',
+              }}
+            />
           </Box>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <Grid container spacing={{ xs: 3, md: 4 }}>
+        {/* Testimonials */}
+        <Grid container justifyContent="center">
           {testimonials.map((t, idx) => (
-            <Grid item xs={12} md={4} key={t.name}>
+            <Grid item xs={12} key={t.name} sx={{ maxWidth: 700 }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -57,28 +65,51 @@ const Testimonials = () => {
               >
                 <Card
                   sx={{
-                    height: '100%',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    backdropFilter: 'blur(10px)',
+                    background: 'rgba(255, 255, 255, 0.04)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: 3,
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
+                    borderRadius: 4,
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                    p: { xs: 3, md: 4 },
+                    textAlign: 'center',
                     color: 'white',
                   }}
                 >
-                  <CardContent sx={{ flex: 1 }}>
-                    <Typography variant="body1" sx={{ mb: 3, fontSize: '1rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.85)' }}>
-                      "{t.feedback}"
+                  <CardContent>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        mb: 4,
+                        fontSize: { xs: '1rem', md: '1.15rem' },
+                        fontStyle: 'italic',
+                        lineHeight: 1.8,
+                        color: 'rgba(255,255,255,0.85)',
+                      }}
+                    >
+                      “{t.feedback}”
                     </Typography>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mt: 'auto' }}>
-                      <Avatar src={t.avatar} alt={t.name} sx={{ width: 56, height: 56, mr: 2 }} />
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Avatar
+                        src={t.avatar}
+                        alt={t.name}
+                        sx={{
+                          width: 70,
+                          height: 70,
+                          mr: 2.5,
+                          border: '3px solid #FF6B35',
+                        }}
+                      />
                       <Box>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#FF6B35' }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            fontWeight: 700,
+                            fontSize: '1.1rem',
+                            color: '#FF6B35',
+                          }}
+                        >
                           {t.name}
                         </Typography>
-                        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)' }}>
+                        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>
                           {t.role}
                         </Typography>
                       </Box>
