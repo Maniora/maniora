@@ -36,6 +36,7 @@ import {
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import Testimonials from "./components/Testimonials';
 
 function CountUp({ end, duration = 1.5 }) {
   const [count, setCount] = useState(0);
@@ -1208,5 +1209,7 @@ const Home = () => {
     </>
   );
 };
+
+<Testimonials />
 
 export default Home; 
