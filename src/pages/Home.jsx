@@ -1206,10 +1206,12 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
+
+      {/* Testimonials Section */}
+      <Testimonials />
     </>
   );
 };
 
-<Testimonials />
 
 export default Home; 
