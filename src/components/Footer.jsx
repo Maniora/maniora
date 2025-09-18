@@ -464,12 +464,49 @@ const Footer = () => {
               borderTop: '1px solid rgba(255, 255, 255, 0.1)',
               mt: 4,
               pt: 3,
-              textAlign: 'center',
             }}
           >
-            <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.5)' }}>
-              © {currentYear} MANIORA. All rights reserved. | Designed with ❤️ for digital excellence
-            </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: { xs: 1.5, md: 2 },
+                textAlign: { xs: 'center', md: 'left' },
+              }}
+            >
+              <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                © {currentYear} MANIORA. All rights reserved. | Designed with ❤️ for digital excellence
+              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                <Link
+                  href="/privacy"
+                  sx={{
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    textDecoration: 'none',
+                    fontSize: { xs: '0.9rem', md: '0.9rem' },
+                    '&:hover': { color: '#FF2C1F', textDecoration: 'none' },
+                    transition: 'color 0.3s ease',
+                  }}
+                >
+                  Privacy Policy
+                </Link>
+                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.4)', fontSize: { xs: '0.9rem', md: '0.9rem' } }}>|</Typography>
+                <Link
+                  href="/terms"
+                  sx={{
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    textDecoration: 'none',
+                    fontSize: { xs: '0.9rem', md: '0.9rem' },
+                    '&:hover': { color: '#FF2C1F', textDecoration: 'none' },
+                    transition: 'color 0.3s ease',
+                  }}
+                >
+                  Terms & Conditions
+                </Link>
+              </Box>
+            </Box>
           </Box>
         </motion.div>
       </Container>
