@@ -563,6 +563,7 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
+                
                 <Box
                   sx={{
                     position: 'relative',
