@@ -160,7 +160,7 @@ const Home = () => {
         <meta property="og:image" content="/logo2White.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maniora.in/" />
-        <meta name="twitter:card" content="/home.png" />
+        <meta name="twitter:card" content="/home.webp" />
         <meta name="twitter:title" content="MANIORA | Website Development & Digital Solutions" />
         <meta name="twitter:description" content="Premium, custom-built websites and digital solutions. No templates, just results." />
         <meta name="twitter:image" content="/logo2White.png" />
@@ -583,7 +583,7 @@ const Home = () => {
                 >
                   <Box
                     component="img"
-                    src="/home.png"
+                    src="/home.webp"
                     alt="MANIORA Office or Team"
                     sx={{
                       width: { xs: '100%', md: '120%' },
