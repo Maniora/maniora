@@ -283,19 +283,24 @@ const Home = () => {
                   <Grid 
                     container 
                     spacing={{ md: 2 }} 
-                    sx={{ mt: 3, mb: 3, justifyContent: 'flex-start', textAlign: 'left' }}
+                    sx={{ mt: 3, mb: 3, justifyContent: 'center', textAlign: 'center' }}
                   >
                     <Grid item md={3}>
                       <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
-                        <CountUp end={150} />+
+                        <CountUp end={3} />+
                       </Typography>
                       <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Projects Delivered</Typography>
                     </Grid>
                     <Grid item md={3}>
                       <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
-                        <CountUp end={100} />%
+                        <CountUp end={99} />%
                       </Typography>
-                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Client Retention</Typography>
+                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>
+                        Client
+                        <Box component="span" sx={{ display: { xs: 'none', md: 'inline' } }}><br /></Box>
+                        <Box component="span" sx={{ display: { xs: 'inline', md: 'none' } }}> </Box>
+                        Retention
+                      </Typography>
                     </Grid>
                     <Grid item md={3}>
                       <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
