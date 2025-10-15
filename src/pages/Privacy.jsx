@@ -81,7 +81,7 @@ const Privacy = () => {
           <Section title="8. Your Rights">
             Subject to applicable law, you may request access, correction, deletion, or restriction of your personal
             information, or object to certain processing. To exercise these rights, contact
-            maniora.official@gmail.com.
+            info@maniora.in.
           </Section>
 
           <Section title="9. Children's Privacy">
@@ -100,7 +100,7 @@ const Privacy = () => {
           </Section>
 
           <Section title="Contact">
-            If you have questions about this policy, contact us at maniora.official@gmail.com.
+            If you have questions about this policy, contact us at info@maniora.in.
           </Section>
         </Container>
       </Box>
