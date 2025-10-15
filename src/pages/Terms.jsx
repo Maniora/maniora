@@ -107,7 +107,7 @@ const Terms = () => {
           </Section>
 
           <Section title="Contact">
-            For any questions, contact us at maniora.official@gmail.com.
+            For any questions, contact us at info@maniora.in.
           </Section>
         </Container>
       </Box>
