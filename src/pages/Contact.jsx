@@ -212,6 +212,15 @@ const Contact = () => {
         <meta name="twitter:title" content="Contact | MANIORA - Start Your Project" />
         <meta name="twitter:description" content="Contact MANIORA for bespoke website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
         <meta name="twitter:image" content="/logo2White.png" />
+        {/* Google Tag Manager */}
+        <script>
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W25MGLNG');`}
+        </script>
+        {/* End Google Tag Manager */}
         <script type="application/ld+json">
           {`
             {
@@ -442,7 +451,6 @@ const Contact = () => {
                             '& .MuiSelect-icon': {
                               color: '#FF2C1F',
                             },
-                            mb: 2,
                           }}
                         >
                           <MenuItem value="" disabled>
@@ -488,7 +496,6 @@ const Contact = () => {
                             '& .MuiSelect-icon': {
                               color: '#FF2C1F',
                             },
-                            mb: 2,
                           }}
                         >
                           <MenuItem value="" disabled>

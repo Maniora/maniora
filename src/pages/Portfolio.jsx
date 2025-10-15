@@ -6,32 +6,9 @@ import {
   Box, 
   Card, 
   CardContent,
-  CardMedia,
-  Button,
-  Chip,
-  Tabs,
-  Tab,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  IconButton
+  Button
 } from '@mui/material';
-import { 
-  Code, 
-  Brush, 
-  Settings, 
-  Share,
-  Close,
-  Launch,
-  GitHub,
-  Visibility,
-  Speed,
-  Security,
-  Devices,
-  Analytics
-} from '@mui/icons-material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 
 const Portfolio = () => {
@@ -39,27 +16,17 @@ const Portfolio = () => {
 
   const projects = [
     {
-    id: 0,
+      id: 0,
+      title: "4KMedia",
+      category: "Digital Marketing Agency",
+      description: "Digital marketing done right. From ads to content, we blend creativity and performance to make brands stand out and grow with measurable, sustainable results.",
+      liveUrl: "https://4kmedia.in"
+    },
+    {
+    id: 1,
     title: "Pixelfable18",
     category: "E-Commerce / Preset Selling",
     description: "A modern e-commerce platform where the client sells Lightroom preset packs. Includes a secure admin panel to manage orders, track presets, and handle customers effectively.",
-    image: "/images/pixelfable18-placeholder.png", // Replace with actual screenshot
-    metrics: {
-      loadTime: "1.3s",
-      lighthouse: "94/100",
-      mobile: "Optimized",
-      uptime: "99.8%"
-    },
-    features: [
-      "Preset selling platform",
-      "Integrated admin panel",
-      "Secure payment handling",
-      "Order management system"
-    ],
-    beforeAfter: {
-      before: "No online selling platform",
-      after: "Full-featured e-commerce website with automated order tracking"
-    },
     liveUrl: "https://pixelfable18.in"
   },
     {
@@ -67,47 +34,14 @@ const Portfolio = () => {
       title: "Build Your Vision",
       category: "Business Website",
       description: "Premium business website specializing in crafting exceptional digital experiences. Features modern design with strategic positioning and comprehensive service offerings.",
-      image: "/images/c2007c1a-6aec-42c8-a3f9-01f705ffb55d.png",
-      metrics: {
-        loadTime: "1.2s",
-        lighthouse: "95/100",
-        mobile: "Perfect",
-        uptime: "99.9%"
-      },
-      features: [
-        "Modern responsive design",
-        "Service portfolio showcase",
-        "Contact integration",
-        "Professional branding"
-      ],
-      beforeAfter: {
-        before: "No online presence for business",
-        after: "Complete digital presence with inquiry system"
-      },
       liveUrl: "https://www.buildyourvision.in/"
     },
+    
     {
       id: 3,
       title: "N Wellness Studio",
       category: "Healthcare & Wellness",
       description: "Premium wellness and spa services platform featuring aromatherapy, body treatments, and holistic wellness solutions with online booking system.",
-      image: "/images/b6159be2-e778-431e-a8f3-be873ca76eb9.png",
-      metrics: {
-        loadTime: "1.1s",
-        lighthouse: "96/100",
-        mobile: "Perfect",
-        uptime: "99.7%"
-      },
-      features: [
-        "Service booking system",
-        "Treatment catalog",
-        "Therapist profiles",
-        "Online appointment scheduling"
-      ],
-      beforeAfter: {
-        before: "Phone-only booking system",
-        after: "24/7 online booking with 40% more appointments"
-      },
       liveUrl: "https://nwellness.onrender.com/"
     },
     {
@@ -115,10 +49,6 @@ const Portfolio = () => {
       title: "Gangadhar Nagarjuna Workshops",
       category: "Workshop Platform",
       description: "Workshop conducting website with admin panel and payment gateway.",
-      image: "/images/gangadharnagarjuna-placeholder.png",
-      metrics: {},
-      features: [],
-      beforeAfter: {},
       liveUrl: "http://gangadharnagarjuna.in/"
     }
   ];
@@ -140,6 +70,15 @@ const Portfolio = () => {
         <meta name="twitter:title" content="Portfolio | MANIORA - Custom Website Projects" />
         <meta name="twitter:description" content="Explore MANIORA's portfolio of custom website projects and digital solutions for premium brands." />
         <meta name="twitter:image" content="/logo2White.png" />
+        {/* Google Tag Manager */}
+        <script>
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W25MGLNG');`}
+        </script>
+        {/* End Google Tag Manager */}
         <script type="application/ld+json">
           {`
             {
@@ -244,7 +183,7 @@ const Portfolio = () => {
                     }}
                   >
                     <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', p: { xs: 2, md: 3 } }}>
-                      <Box sx={{ mb: 1.5 }}>
+                      <Box sx={{ mb: 1.5, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                         <Typography sx={{ fontSize: '1rem', color: '#FF2C1F', fontWeight: 700, mb: 0.5, letterSpacing: 0.5 }}>{project.category}</Typography>
                         <Typography variant="h5" sx={{ fontWeight: 800, color: 'white', mb: 1, fontSize: { xs: '1.18rem', md: '1.28rem' }, lineHeight: 1.25 }}>{project.title}</Typography>
                         <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.85)', fontSize: { xs: '1rem', md: '1.08rem' }, lineHeight: 1.6 }}>{project.description}</Typography>
