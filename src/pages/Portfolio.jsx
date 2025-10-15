@@ -59,7 +59,7 @@ const Portfolio = () => {
     <>
       <Helmet>
         <title>Portfolio | MANIORA - Custom Website Projects</title>
-        <meta name="description" content="View MANIORA's portfolio of custom website projects. See our work in bespoke web development, redesign, and digital solutions for premium brands." />
+        <meta name="description" content="View MANIORA's portfolio of custom website projects. See our work in web development, redesign, and digital solutions for premium brands." />
         <meta name="keywords" content="portfolio, website projects, custom websites, web development, MANIORA, premium web agency, digital solutions" />
         <meta property="og:title" content="Portfolio | MANIORA - Custom Website Projects" />
         <meta property="og:description" content="Explore MANIORA's portfolio of custom website projects and digital solutions for premium brands." />

@@ -201,16 +201,16 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact | MANIORA - Start Your Project</title>
-        <meta name="description" content="Contact MANIORA for bespoke website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
+        <meta name="description" content="Contact MANIORA for website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
         <meta name="keywords" content="contact, MANIORA, website development, web design, digital solutions, premium web agency, Hyderabad" />
         <meta property="og:title" content="Contact | MANIORA - Start Your Project" />
-        <meta property="og:description" content="Contact MANIORA for bespoke website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
+        <meta property="og:description" content="Contact MANIORA for website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
         <meta property="og:image" content="/logo2White.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maniora.in/contact" />
         <meta name="twitter:card" content="aboutus.png" />
         <meta name="twitter:title" content="Contact | MANIORA - Start Your Project" />
-        <meta name="twitter:description" content="Contact MANIORA for bespoke website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
+        <meta name="twitter:description" content="Contact MANIORA for website development, redesign, maintenance, and digital solutions. Start your premium web project today." />
         <meta name="twitter:image" content="/logo2White.png" />
         {/* Google Tag Manager */}
         <script>

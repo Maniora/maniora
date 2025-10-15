@@ -141,16 +141,16 @@ const Services = () => {
     <>
       <Helmet>
         <title>Services | MANIORA - Custom Website Development</title>
-        <meta name="description" content="Explore MANIORA's bespoke website development, redesign, maintenance, and social media management services. Premium digital solutions for your brand." />
+        <meta name="description" content="Explore MANIORA's website development, redesign, maintenance, and social media management services. Premium digital solutions for your brand." />
         <meta name="keywords" content="services, website development, web design, website redesign, website maintenance, social media management, MANIORA, premium web agency" />
         <meta property="og:title" content="Services | MANIORA - Custom Website Development" />
-        <meta property="og:description" content="Bespoke website development, redesign, maintenance, and social media management by MANIORA. Premium digital solutions for your brand." />
+        <meta property="og:description" content="website development, redesign, maintenance, and social media management by MANIORA. Premium digital solutions for your brand." />
         <meta property="og:image" content="/logo2White.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maniora.in/services" />
         <meta name="twitter:card" content="/aboutus.png" />
         <meta name="twitter:title" content="Services | MANIORA - Custom Website Development" />
-        <meta name="twitter:description" content="Bespoke website development, redesign, maintenance, and social media management by MANIORA. Premium digital solutions for your brand." />
+        <meta name="twitter:description" content="website development, redesign, maintenance, and social media management by MANIORA. Premium digital solutions for your brand." />
         <meta name="twitter:image" content="/logo2White.png" />
         {/* Google Tag Manager */}
         <script>

@@ -64,7 +64,7 @@ const Home = () => {
   const services = [
     {
       icon: Code,
-      title: 'Bespoke Website Development',
+      title: 'Website Development',
       description: 'Websites engineered from scratch for your brand, using the latest technologies. No templates, just originality.',
       color: '#FF2C1F'
     },
@@ -111,12 +111,6 @@ const Home = () => {
     }
   ];
 
-  const statistics = [
-    { number: '150+', label: 'Projects Delivered' },
-    { number: '100%', label: 'Client Retention' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '0', label: 'Templates Used' }
-  ];
 
   const process = [
     {
@@ -152,10 +146,10 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>MANIORA | Bespoke Website Development & Digital Solutions</title>
+        <title>MANIORA | Website Development & Digital Solutions</title>
         <meta name="description" content="MANIORA crafts high-performance, custom websites from scratch. No templates, no limits—just premium web design, redesign, maintenance, and social media management for your brand." />
         <meta name="keywords" content="website development, custom websites, web design, digital solutions, website redesign, social media management, MANIORA, Hyderabad, premium web agency" />
-        <meta property="og:title" content="MANIORA | Bespoke Website Development & Digital Solutions" />
+        <meta property="og:title" content="MANIORA | Website Development & Digital Solutions" />
         <meta property="og:description" content="Premium, custom-built websites and digital solutions. No templates, just results. Based in Hyderabad, serving global brands." />
         <meta property="og:image" content="/logo2White.png" />
         <meta property="og:type" content="website" />
@@ -284,85 +278,52 @@ const Home = () => {
                 >
                   Websites crafted for your brand—no templates, no limits, just results.
                 </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: { xs: '0.95rem', md: '1.1rem' },
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    mb: { xs: 3, md: 4 },
-                    maxWidth: { xs: '100%', md: '500px' },
-                    textAlign: { xs: 'center', md: 'left' },
-                    lineHeight: { xs: 1.6, md: 1.5 },
-                  }}
-                >
-                  MANIORA delivers high-performance websites tailored to your business goals. We build from the ground up—no WordPress, no Shopify, no Wix—so your site is truly yours, unique and future-ready.
-                </Typography>
+                {/* Desktop (md+) metrics and CTAs stay here to preserve layout */}
+                <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                  <Grid 
+                    container 
+                    spacing={{ md: 2 }} 
+                    sx={{ mt: 3, mb: 3, justifyContent: 'flex-start', textAlign: 'left' }}
+                  >
+                    <Grid item md={3}>
+                      <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
+                        <CountUp end={150} />+
+                      </Typography>
+                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Projects Delivered</Typography>
+                    </Grid>
+                    <Grid item md={3}>
+                      <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
+                        <CountUp end={100} />%
+                      </Typography>
+                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Client Retention</Typography>
+                    </Grid>
+                    <Grid item md={3}>
+                      <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
+                        <CountUp end={98} />%
+                      </Typography>
+                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Client Satisfaction</Typography>
+                    </Grid>
+                    <Grid item md={3}>
+                      <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: '2.6rem', lineHeight: 1 }}>
+                        <CountUp end={24} />/7
+                      </Typography>
+                      <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: '0.95rem' }}>Support Availability</Typography>
+                    </Grid>
+                  </Grid>
 
-                <Box sx={{ 
-                  display: 'flex', 
-                  gap: { xs: 1, md: 2 }, 
-                  flexWrap: 'wrap',
-                  justifyContent: { xs: 'center', md: 'flex-start' }
-                }}>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Button
-                      component={Link}
-                      to="/contact"
-                      variant="contained"
-                      size="large"
-                      sx={{
-                        background: '#FF2C1F',
-                        color: 'white',
-                        px: { xs: 3, md: 4 },
-                        py: { xs: 1.2, md: 1.5 },
-                        fontSize: { xs: '0.9rem', md: '1.1rem' },
-                        fontWeight: 600,
-                        width: { xs: '100%', sm: 'auto' },
-                        '&:hover': {
-                          background: '#E0241A',
-                          transform: 'translateY(-2px)',
-                        },
-                        transition: 'all 0.3s ease',
-                      }}
-                    >
-                      Get Started
-                      <ArrowForward sx={{ ml: 1 }} />
-                    </Button>
-                  </motion.div>
-                  
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Button
-                      component="a"
-                      href="https://wa.me/919640161711?text=Hi%20MANIORA%20Team%2C%20I%20would%20like%20to%20enquire%20about%20your%20website%20services."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="outlined"
-                      size="large"
-                      startIcon={<WhatsApp sx={{ color: '#25D366' }} />}
-                      sx={{
-                        borderColor: 'rgba(255, 255, 255, 0.3)',
-                        color: 'white',
-                        px: { xs: 3, md: 4 },
-                        py: { xs: 1.2, md: 1.5 },
-                        fontSize: { xs: '0.9rem', md: '1.1rem' },
-                        fontWeight: 600,
-                        width: { xs: '100%', sm: 'auto' },
-                        '&:hover': {
-                          borderColor: '#25D366',
-                          background: 'rgba(37, 211, 102, 0.08)',
-                        },
-                        transition: 'all 0.3s ease',
-                      }}
-                    >
-                      WhatsApp Enquiry
-                    </Button>
-                  </motion.div>
+                  <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'flex-start' }}>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button component={Link} to="/contact" variant="contained" size="large" sx={{ background: '#FF2C1F', color: 'white', px: 4, py: 1.5, fontSize: '1.1rem', fontWeight: 600, '&:hover': { background: '#E0241A', transform: 'translateY(-2px)' }, transition: 'all 0.3s ease' }}>
+                        Get Started
+                        <ArrowForward sx={{ ml: 1 }} />
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button component="a" href="https://wa.me/919640161711?text=Hi%20MANIORA%20Team%2C%20I%20would%20like%20to%20enquire%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" variant="outlined" size="large" startIcon={<WhatsApp sx={{ color: '#25D366' }} />} sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white', px: 4, py: 1.5, fontSize: '1.1rem', fontWeight: 600, '&:hover': { borderColor: '#25D366', background: 'rgba(37, 211, 102, 0.08)' }, transition: 'all 0.3s ease' }}>
+                        WhatsApp Enquiry
+                      </Button>
+                    </motion.div>
+                  </Box>
                 </Box>
               </motion.div>
             </Grid>
@@ -499,6 +460,61 @@ const Home = () => {
               </motion.div>
             </Grid>
           </Grid>
+
+          {/* Metrics - By the Numbers (now below the red ball) */}
+          <Grid 
+            container 
+            spacing={{ xs: 2, md: 2 }} 
+            sx={{ mt: { xs: 3, md: 4 }, justifyContent: 'center', textAlign: 'center', display: { xs: 'flex', md: 'none' } }}
+          >
+            <Grid item xs={6} md={3}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }}>
+                <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: { xs: '1.8rem', md: '2.6rem' }, lineHeight: 1 }}>
+                  <CountUp end={150} />+
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: { xs: '0.85rem', md: '0.95rem' } }}>Projects Delivered</Typography>
+              </motion.div>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
+                <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: { xs: '1.8rem', md: '2.6rem' }, lineHeight: 1 }}>
+                  <CountUp end={100} />%
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: { xs: '0.85rem', md: '0.95rem' } }}>Client Retention</Typography>
+              </motion.div>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
+                <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: { xs: '1.8rem', md: '2.6rem' }, lineHeight: 1 }}>
+                  <CountUp end={98} />%
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: { xs: '0.85rem', md: '0.95rem' } }}>Client Satisfaction</Typography>
+              </motion.div>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
+                <Typography sx={{ fontWeight: 800, color: '#FF2C1F', fontSize: { xs: '1.8rem', md: '2.6rem' }, lineHeight: 1 }}>
+                  <CountUp end={24} />/7
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.85)', mt: 0.6, fontSize: { xs: '0.85rem', md: '0.95rem' } }}>Support Availability</Typography>
+              </motion.div>
+            </Grid>
+          </Grid>
+
+          {/* CTAs under metrics */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: { xs: 1, md: 2 }, flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' }, mt: { xs: 2, md: 3 } }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button component={Link} to="/contact" variant="contained" size="large" sx={{ background: '#FF2C1F', color: 'white', px: { xs: 3, md: 4 }, py: { xs: 1.2, md: 1.5 }, fontSize: { xs: '0.9rem', md: '1.1rem' }, fontWeight: 600, width: { xs: '100%', sm: 'auto' }, '&:hover': { background: '#E0241A', transform: 'translateY(-2px)' }, transition: 'all 0.3s ease' }}>
+                Get Started
+                <ArrowForward sx={{ ml: 1 }} />
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button component="a" href="https://wa.me/919640161711?text=Hi%20MANIORA%20Team%2C%20I%20would%20like%20to%20enquire%20about%20your%20website%20services." target="_blank" rel="noopener noreferrer" variant="outlined" size="large" startIcon={<WhatsApp sx={{ color: '#25D366' }} />} sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', color: 'white', px: { xs: 3, md: 4 }, py: { xs: 1.2, md: 1.5 }, fontSize: { xs: '0.9rem', md: '1.1rem' }, fontWeight: 600, width: { xs: '100%', sm: 'auto' }, '&:hover': { borderColor: '#25D366', background: 'rgba(37, 211, 102, 0.08)' }, transition: 'all 0.3s ease' }}>
+                WhatsApp Enquiry
+              </Button>
+            </motion.div>
+          </Box>
         </Container>
       </Box>
 
@@ -636,50 +652,7 @@ const Home = () => {
         </Container>
       </Box>
 
-      {/* Statistics Section */}
-      {/* <Box sx={{ pt: { xs: 4, md: 2 }, pb: { xs: 5, md: 6 }, background: 'rgba(255, 44, 31, 0.05)' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={{ xs: 3, md: 4 }}>
-            {statistics.map((stat, index) => (
-              <Grid item xs={6} md={3} key={stat.label}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  style={{ textAlign: 'center' }}
-                >
-                  <Typography
-                    variant="h2"
-                    sx={{
-                      fontWeight: 700,
-                      color: '#FF2C1F',
-                      fontSize: { xs: '1.8rem', sm: '2rem', md: '3rem' },
-                      mb: { xs: 0.5, md: 1 },
-                    }}
-                  >
-                    {stat.label === 'Custom Projects' ? <CountUp end={50} /> :
-                     stat.label === 'Custom Code' ? <CountUp end={100} /> :
-                     stat.label === 'Support Available' ? '24/7' :
-                     stat.label === 'Templates Used' ? '0' : stat.number}
-                    {stat.label === 'Custom Projects' && '+'}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      fontWeight: 500,
-                      fontSize: { xs: '0.8rem', sm: '0.9rem', md: '1rem' },
-                    }}
-                  >
-                    {stat.label}
-                  </Typography>
-                </motion.div>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box> */}
+      
 
       {/* Services Highlight Section */}
       <Box sx={{ py: { xs: 6, md: 8 }, background: 'rgba(255, 255, 255, 0.02)' }}>
@@ -1116,7 +1089,7 @@ const Home = () => {
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <Email sx={{ color: '#FF2C1F' }} />
                     <Typography sx={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: { xs: '0.9rem', md: '1rem' } }}>
-                      maniora.official@gmail.com
+                      info@maniora.in
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
